@@ -10,13 +10,13 @@ Follow redirects for hyperquest GET requests.  Process all other requests exactl
 
 ```js
 //basic usage
-var request = require('hyperquest').request;
+var request = require('hyperdirect').request;
 
 request('https://github.com/ForbesLindesay/hyperdirect/archive/master.tar.gz')
   .pipe(require('fs').createWriteStream(__dirname + '/hyperdirect.tar.gz'));
 
 //moderate usage
-var request = require('hyperquest')(2/* Max Redirects to follow, defaults to 10 */);
+var request = require('hyperdirect')(2/* Max Redirects to follow, defaults to 10 */);
 
 request('https://github.com/ForbesLindesay/hyperdirect/archive/master.tar.gz')
   .pipe(require('fs').createWriteStream(__dirname + '/hyperdirect.tar.gz'));
