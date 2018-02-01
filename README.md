@@ -1,3 +1,5 @@
+> This project is no longer maintained, use [http-basic](https://www.npmjs.com/package/http-basic) instead.
+
 # hyperdirect
 
 Follow redirects for hyperquest GET requests.  Process all other requests exactly as normal.
