@@ -41,6 +41,11 @@ function direct(subquest, maxRedirects) {
         res.url = opts.uri;
         if (isRedirect(res.statusCode)) {
           remainingRedirects--;
+
+          if (res.headers.location === undefined) {
+            return rs.emit('error', new Error('The response was redirected but received an empty Location'));
+          } 
+          
           rs.emit('redirect', res);
           opts.uri = res.headers.location;
           return doRequest();
