@@ -64,5 +64,5 @@ function direct(subquest, maxRedirects) {
 }
 
 function isRedirect(statusCode) {
-  return statusCode === 301 || statusCode === 302 || statusCode === 307 || statusCode === 308;
+  return statusCode === 301 || statusCode === 302 || statusCode === 303 || statusCode === 307 || statusCode === 308;
 }
